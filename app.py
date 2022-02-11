@@ -14,10 +14,10 @@ from PIL import Image
 
 #Loading the Model
 
-model = load_model('/content/drive/MyDrive/vehicle_detection/best_model.h5')
+model = load_model('best_model.h5')
 
 #Name of Classes
-a_file = open("/content/drive/MyDrive/vehicle_detection/vehicle_dict.pkl", "rb")
+a_file = open("vehicle_dict.pkl", "rb")
 ref = pickle.load(a_file)
 
 a_file.close()
@@ -35,7 +35,7 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 
 
-image = Image.open('/content/drive/MyDrive/vehicle_detection/vehicle-types-mage.jpeg')
+image = Image.open('vehicle-types-mage.jpeg')
 st.image(image,use_column_width=True)
 
 st.markdown("""
